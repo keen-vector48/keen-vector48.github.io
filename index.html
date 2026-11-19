@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nana今日吃瓜 - 娱乐观察社区,热点话题与深度内容平台</title>
+<meta name="description" content="nana今日吃瓜官方网站，专注娱乐话题观察与热点内容聚合的原创视频社区，提供高清精品内容、创作者矩阵与行业观察，值得信赖的娱乐内容生态平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e2376b'/%3E%3Ccircle cx='32' cy='30' r='13' fill='%23fff6ea'/%3E%3Cpath d='M32 17 v26 M19 30 h26' stroke='%23e2376b' stroke-width='3'/%3E%3Cpath d='M22 48 q10 8 20 0' stroke='%23fff6ea' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ng-pink:#e2376b;
+  --ng-pink-deep:#b0204f;
+  --ng-coral:#ff7a59;
+  --ng-cream:#fff6ea;
+  --ng-ink:#231a20;
+  --ng-ink-soft:#5c4f57;
+  --ng-line:#f0dcd2;
+  --ng-mint:#2fa38b;
+  --ng-gold:#e9a93d;
+  --ng-shadow:0 14px 34px rgba(178,32,79,.12);
+  --ng-radius:18px;
+  --ng-sticky:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--ng-sticky);}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--ng-cream);
+  color:var(--ng-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.ng-wrap{width:min(1180px,92%);margin:0 auto}
+.ng-section{padding:64px 0}
+.ng-section--tint{background:linear-gradient(180deg,#fff9f2 0%,#fdeee6 100%)}
+.ng-section--deep{background:linear-gradient(160deg,#2b1f27 0%,#43212f 100%);color:#f8ece6}
+.ng-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.14em;color:var(--ng-pink-deep);font-weight:700;text-transform:uppercase}
+.ng-eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--ng-pink),var(--ng-coral))}
+.ng-h2{font-size:clamp(24px,2.6vw,34px);line-height:1.3;letter-spacing:.01em;margin:12px 0 10px}
+.ng-lead{color:var(--ng-ink-soft);max-width:760px;font-size:15.5px}
+.ng-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:34px}
+
+/* ---------- 公告条 + 页头 吸顶 ---------- */
+.ng-sticky-stack{position:sticky;top:0;z-index:60;box-shadow:0 6px 20px rgba(178,32,79,.08)}
+.ng-notice{background:linear-gradient(90deg,var(--ng-pink-deep),var(--ng-pink) 45%,var(--ng-coral));color:#fff;font-size:13.5px}
+.ng-notice__inner{display:flex;align-items:center;gap:14px;padding:9px 0;flex-wrap:wrap}
+.ng-notice__tag{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px;letter-spacing:.08em;flex:none}
+.ng-notice__list{display:flex;gap:26px;flex-wrap:wrap;flex:1;min-width:200px}
+.ng-notice__item{display:flex;align-items:center;gap:6px}
+.ng-notice__item b{font-weight:700}
+.ng-notice__more{font-size:12.5px;border-bottom:1px dashed rgba(255,255,255,.8);padding-bottom:1px}
+.ng-header{background:rgba(255,246,234,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--ng-line)}
+.ng-header__inner{display:flex;align-items:center;gap:22px;padding:14px 0}
+.ng-brand{display:flex;align-items:center;gap:11px;flex:none}
+.ng-brand__mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(140deg,var(--ng-pink),var(--ng-coral));display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;letter-spacing:-.04em;box-shadow:0 8px 18px rgba(226,55,107,.32)}
+.ng-brand__text strong{display:block;font-size:17px;letter-spacing:.02em}
+.ng-brand__text span{font-size:11.5px;color:var(--ng-ink-soft);letter-spacing:.16em}
+.ng-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.ng-nav a{font-size:14.5px;padding:7px 11px;border-radius:9px;color:var(--ng-ink-soft);font-weight:600;transition:.22s}
+.ng-nav a:hover,.ng-nav a.ng-is-active{color:var(--ng-pink-deep);background:#fde6dd}
+.ng-search{display:flex;align-items:center;gap:8px;flex:none}
+.ng-search__box{display:flex;align-items:center;background:#fff;border:1.5px solid var(--ng-line);border-radius:999px;padding:5px 6px 5px 14px;transition:.22s}
+.ng-search__box:focus-within{border-color:var(--ng-pink);box-shadow:0 0 0 4px rgba(226,55,107,.1)}
+.ng-search input{border:0;outline:0;font-size:14px;width:150px;background:transparent;color:var(--ng-ink);font-family:inherit}
+.ng-search__btn{border:0;cursor:pointer;background:linear-gradient(135deg,var(--ng-pink),var(--ng-coral));color:#fff;border-radius:999px;padding:6px 15px;font-size:13.5px;font-weight:700;font-family:inherit;transition:.2s}
+.ng-search__btn:hover{filter:brightness(1.07)}
+.ng-burger{display:none;flex:none;width:42px;height:42px;border-radius:11px;border:1.5px solid var(--ng-line);background:#fff;cursor:pointer;position:relative}
+.ng-burger span{position:absolute;left:11px;width:20px;height:2px;border-radius:2px;background:var(--ng-ink);transition:.25s}
+.ng-burger span:nth-child(1){top:14px}
+.ng-burger span:nth-child(2){top:20px}
+.ng-burger span:nth-child(3){top:26px}
+.ng-header.ng-is-open .ng-burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.ng-header.ng-is-open .ng-burger span:nth-child(2){opacity:0}
+.ng-header.ng-is-open .ng-burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.ng-search-feedback{font-size:13px;color:var(--ng-pink-deep);font-weight:600;padding:6px 2px 10px;display:none}
+.ng-search-feedback.ng-is-show{display:block}
+
+/* ---------- 首屏 ---------- */
+.ng-hero{padding:46px 0 58px;position:relative;overflow:hidden}
+.ng-hero::after{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,122,89,.28),transparent 68%);pointer-events:none}
+.ng-hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ng-hero__title{font-size:clamp(40px,5.6vw,68px);line-height:1.04;letter-spacing:-.02em;font-weight:800}
+.ng-hero__title em{font-style:normal;background:linear-gradient(120deg,var(--ng-pink),var(--ng-coral) 60%,var(--ng-gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ng-hero__sub{margin-top:16px;font-size:clamp(17px,1.7vw,21px);font-weight:700;color:var(--ng-pink-deep);letter-spacing:.02em}
+.ng-hero__desc{margin-top:16px;color:var(--ng-ink-soft);font-size:15.5px;max-width:560px}
+.ng-hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ng-btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 24px;font-size:15px;font-weight:700;border:1.5px solid transparent;cursor:pointer;font-family:inherit;transition:.22s}
+.ng-btn--primary{background:linear-gradient(135deg,var(--ng-pink),var(--ng-coral));color:#fff;box-shadow:0 12px 26px rgba(226,55,107,.3)}
+.ng-btn--primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(226,55,107,.36)}
+.ng-btn--ghost{background:#fff;border-color:var(--ng-line);color:var(--ng-ink)}
+.ng-btn--ghost:hover{border-color:var(--ng-pink);color:var(--ng-pink-deep)}
+.ng-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;max-width:520px}
+.ng-stats__item{background:#fff;border:1px solid var(--ng-line);border-radius:14px;padding:14px 16px;box-shadow:0 6px 16px rgba(178,32,79,.05)}
+.ng-stats__num{font-size:clamp(20px,2.2vw,26px);font-weight:800;color:var(--ng-pink-deep);letter-spacing:-.01em}
+.ng-stats__label{font-size:12.5px;color:var(--ng-ink-soft);margin-top:2px}
+.ng-hero__visual{position:relative}
+.ng-hero__cover{border-radius:24px;overflow:hidden;box-shadow:0 28px 54px rgba(110,26,52,.24);aspect-ratio:4/3;position:relative}
+.ng-hero__cover img{width:100%;height:100%;object-fit:cover}
+.ng-hero__badge{position:absolute;left:16px;bottom:16px;background:rgba(35,26,32,.72);backdrop-filter:blur(6px);color:#fff;border-radius:12px;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:8px}
+.ng-hero__dot{width:8px;height:8px;border-radius:50%;background:#4be0b0;box-shadow:0 0 0 4px rgba(75,224,176,.24)}
+.ng-hero__float{position:absolute;right:-12px;top:-16px;background:#fff;border:1px solid var(--ng-line);border-radius:16px;padding:12px 16px;box-shadow:var(--ng-shadow);display:flex;align-items:center;gap:10px}
+.ng-hero__float b{color:var(--ng-pink-deep);font-size:19px}
+.ng-hero__float span{font-size:12px;color:var(--ng-ink-soft);display:block;line-height:1.3}
+
+/* ---------- 关键词解析 ---------- */
+.ng-about__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+.ng-about__text p{margin-bottom:15px;font-size:15.5px;color:var(--ng-ink-soft)}
+.ng-about__text p b{color:var(--ng-ink)}
+.ng-about__aside{background:#fff;border:1px solid var(--ng-line);border-radius:20px;padding:24px;box-shadow:var(--ng-shadow)}
+.ng-about__aside h3{font-size:17px;margin-bottom:14px}
+.ng-about__list li{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--ng-line);font-size:14.5px;color:var(--ng-ink-soft)}
+.ng-about__list li:last-child{border-bottom:0}
+.ng-about__list i{flex:none;width:22px;height:22px;border-radius:7px;background:#fde6dd;color:var(--ng-pink-deep);font-style:normal;font-size:12px;font-weight:800;display:grid;place-items:center;margin-top:3px}
+.ng-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.ng-tag{font-size:13px;padding:5px 13px;border-radius:999px;background:#fde6dd;color:var(--ng-pink-deep);font-weight:600}
+.ng-tag--mint{background:#dff4ee;color:#1c7a68}
+.ng-tag--gold{background:#fdf0d8;color:#a3741a}
+
+/* ---------- 焦点内容 ---------- */
+.ng-focus__grid{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
+.ng-card{background:#fff;border:1px solid var(--ng-line);border-radius:var(--ng-radius);overflow:hidden;box-shadow:0 8px 22px rgba(178,32,79,.06);transition:transform .25s,box-shadow .25s}
+.ng-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(178,32,79,.14)}
+.ng-card__thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.ng-card__thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ng-card:hover .ng-card__thumb img{transform:scale(1.05)}
+.ng-card__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,26,32,0) 42%,rgba(35,26,32,.78) 100%)}
+.ng-card__play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.22);opacity:0;transition:.25s}
+.ng-card:hover .ng-card__play{opacity:1}
+.ng-card__play::after{content:"";border-left:15px solid var(--ng-pink);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.ng-card__label{position:absolute;left:12px;top:12px;background:rgba(255,246,234,.94);color:var(--ng-pink-deep);font-size:12px;font-weight:700;border-radius:999px;padding:3px 11px}
+.ng-card__meta-on{position:absolute;left:12px;bottom:11px;right:12px;color:#fff;font-size:12.5px;display:flex;justify-content:space-between;gap:10px}
+.ng-card__body{padding:16px 18px 18px}
+.ng-card__title{font-size:16.5px;line-height:1.42;font-weight:700}
+.ng-card__title--lg{font-size:20px}
+.ng-card__desc{font-size:13.8px;color:var(--ng-ink-soft);margin-top:7px}
+.ng-card__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px;flex-wrap:wrap}
+.ng-author-mini{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ng-ink-soft)}
+.ng-avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800;color:#fff;flex:none}
+.ng-av-1{background:linear-gradient(135deg,#e2376b,#ff7a59)}
+.ng-av-2{background:linear-gradient(135deg,#2fa38b,#69d2b5);color:#0d3b32}
+.ng-av-3{background:linear-gradient(135deg,#6a5acd,#a08dfb)}
+.ng-av-4{background:linear-gradient(135deg,#e9a93d,#f7d07c);color:#5a3d05}
+.ng-av-5{background:linear-gradient(135deg,#3b7dd8,#7fb3f5)}
+.ng-av-6{background:linear-gradient(135deg,#d94f70,#f091a8)}
+.ng-ops{display:flex;gap:6px}
+.ng-op{border:1px solid var(--ng-line);background:#fff;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--ng-ink-soft);padding:4px 11px;cursor:pointer;font-family:inherit;transition:.2s;display:inline-flex;align-items:center;gap:5px}
+.ng-op:hover{border-color:var(--ng-pink);color:var(--ng-pink-deep)}
+.ng-op.ng-is-liked{background:#fde6dd;border-color:var(--ng-pink);color:var(--ng-pink-deep)}
+.ng-op.ng-is-saved{background:#dff4ee;border-color:var(--ng-mint);color:#1c7a68}
+.ng-focus__side{display:grid;grid-template-rows:repeat(2,1fr);gap:22px}
+
+/* ---------- 视频流 ---------- */
+.ng-flow__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ng-flow__grid .ng-card:nth-child(1) .ng-card__thumb{aspect-ratio:16/10}
+.ng-badge-soft{display:inline-block;font-size:12px;font-weight:700;color:#1c7a68;background:#dff4ee;border-radius:999px;padding:2px 10px}
+.ng-badge-soft--gold{color:#a3741a;background:#fdf0d8}
+.ng-badge-soft--pink{color:var(--ng-pink-deep);background:#fde6dd}
+
+/* ---------- 专题 ---------- */
+.ng-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ng-topic{position:relative;border-radius:var(--ng-radius);overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;box-shadow:var(--ng-shadow);transition:transform .25s}
+.ng-topic:hover{transform:translateY(-5px)}
+.ng-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ng-topic__shade{position:absolute;inset:0;background:linear-gradient(175deg,rgba(35,26,32,.12),rgba(35,26,32,.86))}
+.ng-topic__in{position:relative;z-index:2}
+.ng-topic__status{display:inline-block;font-size:12px;font-weight:700;background:rgba(255,246,234,.92);color:var(--ng-pink-deep);border-radius:999px;padding:2px 11px;margin-bottom:9px}
+.ng-topic h3{font-size:19px;line-height:1.35}
+.ng-topic p{font-size:13.5px;color:rgba(255,246,234,.86);margin-top:7px}
+
+/* ---------- 创作者 ---------- */
+.ng-creators{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ng-creator{background:#fff;border:1px solid var(--ng-line);border-radius:var(--ng-radius);padding:22px;box-shadow:0 8px 22px rgba(178,32,79,.06);transition:.25s;display:flex;flex-direction:column}
+.ng-creator:hover{transform:translateY(-5px);border-color:#f6cbbc;box-shadow:0 18px 34px rgba(178,32,79,.13)}
+.ng-creator__top{display:flex;align-items:center;gap:13px}
+.ng-creator__av{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff}
+.ng-creator__name{font-size:16px;font-weight:800}
+.ng-creator__field{font-size:12.5px;color:var(--ng-ink-soft)}
+.ng-creator__desc{font-size:13.8px;color:var(--ng-ink-soft);margin-top:13px;flex:1}
+.ng-creator__nums{display:flex;gap:18px;margin-top:14px;font-size:12.5px;color:var(--ng-ink-soft)}
+.ng-creator__nums b{color:var(--ng-pink-deep);font-size:15px;display:block;line-height:1.25}
+.ng-creator__btn{margin-top:15px;width:100%;justify-content:center;padding:9px 0;font-size:14px}
+
+/* ---------- 榜单 ---------- */
+.ng-rank__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ng-rank{background:rgba(255,255,255,.06);border:1px solid rgba(255,246,234,.18);border-radius:var(--ng-radius);padding:22px}
+.ng-rank h3{font-size:16.5px;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ng-rank h3 span{font-size:12px;font-weight:600;color:#f7b3c4;background:rgba(226,55,107,.24);border-radius:999px;padding:2px 10px}
+.ng-rank li{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px dashed rgba(255,246,234,.16);font-size:14px;color:#f0e2dd}
+.ng-rank li:last-child{border-bottom:0}
+.ng-rank__no{flex:none;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;font-size:12.5px;font-weight:800;background:rgba(255,246,234,.14);color:#fff}
+.ng-rank li:nth-child(1) .ng-rank__no{background:linear-gradient(135deg,#e9a93d,#f7d07c);color:#5a3d05}
+.ng-rank li:nth-child(2) .ng-rank__no{background:linear-gradient(135deg,#d8dce4,#f2f4f8);color:#585e6a}
+.ng-rank li:nth-child(3) .ng-rank__no{background:linear-gradient(135deg,#c98a5a,#e5b48d);color:#4a2a12}
+.ng-rank__title{flex:1;line-height:1.4}
+.ng-rank__val{font-size:12.5px;color:#f7b3c4;font-weight:700;flex:none}
+
+/* ---------- 评论 ---------- */
+.ng-words{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ng-word{background:#fff;border:1px solid var(--ng-line);border-radius:16px;padding:20px;box-shadow:0 6px 18px rgba(178,32,79,.05);display:flex;flex-direction:column;gap:12px}
+.ng-word p{font-size:14.2px;color:var(--ng-ink-soft);flex:1}
+.ng-word__who{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700}
+.ng-word__who span{font-weight:500;font-size:12px;color:var(--ng-ink-soft)}
+
+/* ---------- FAQ ---------- */
+.ng-faq__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}
+.ng-faq details{background:#fff;border:1px solid var(--ng-line);border-radius:14px;padding:15px 18px;transition:.22s}
+.ng-faq details[open]{border-color:#f6cbbc;box-shadow:0 10px 24px rgba(178,32,79,.09)}
+.ng-faq summary{cursor:pointer;font-weight:700;font-size:14.8px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.ng-faq summary::-webkit-details-marker{display:none}
+.ng-faq summary::after{content:"+";font-size:19px;color:var(--ng-pink);font-weight:600;transition:.2s;flex:none}
+.ng-faq details[open] summary::after{transform:rotate(45deg)}
+.ng-faq p{font-size:14px;color:var(--ng-ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--ng-line)}
+
+/* ---------- 动态 + 伙伴 ---------- */
+.ng-news{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.ng-news__list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--ng-line)}
+.ng-news__list li:last-child{border-bottom:0}
+.ng-news__date{flex:none;font-size:12.5px;font-weight:800;color:var(--ng-pink-deep);background:#fde6dd;border-radius:9px;padding:4px 10px;height:fit-content}
+.ng-news__title{font-weight:700;font-size:15px}
+.ng-news__desc{font-size:13.5px;color:var(--ng-ink-soft);margin-top:3px}
+.ng-partners{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ng-partner{background:#fff;border:1px solid var(--ng-line);border-radius:14px;padding:16px;display:flex;align-items:center;gap:11px;font-size:14px;font-weight:700;transition:.22s}
+.ng-partner:hover{border-color:var(--ng-pink);transform:translateY(-3px)}
+.ng-partner i{font-style:normal;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:13px;font-weight:800;flex:none;color:#fff}
+
+/* ---------- 联系 / 投稿 ---------- */
+.ng-contact__card{background:linear-gradient(140deg,#2b1f27,#4a2233);border-radius:24px;padding:40px;color:#f8ece6;display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center;box-shadow:0 24px 50px rgba(35,20,28,.3)}
+.ng-contact__card h2{color:#fff;font-size:clamp(23px,2.4vw,31px);line-height:1.32;margin-bottom:12px}
+.ng-contact__card p{color:#e5d2cd;font-size:14.8px}
+.ng-contact__btns{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+.ng-contact__info{background:rgba(255,246,234,.07);border:1px solid rgba(255,246,234,.16);border-radius:16px;padding:20px;font-size:14px;display:grid;gap:11px}
+.ng-contact__info div{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.ng-contact__info span{color:#c9b1ab;font-size:13px}
+.ng-contact__info b{font-weight:700;color:#ffd9e2;text-align:right}
+
+/* ---------- 页脚 ---------- */
+.ng-footer{background:#221820;color:#c9b6bf;padding:52px 0 24px;margin-top:0}
+.ng-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.ng-footer h4{font-size:14.5px;color:#fff;margin-bottom:13px}
+.ng-footer li{font-size:13.5px;padding:4px 0;color:#b9a2ac}
+.ng-footer a:hover{color:#ff9db6}
+.ng-footer__brand{display:flex;align-items:center;gap:11px;margin-bottom:13px}
+.ng-footer__brand .ng-brand__mark{width:38px;height:38px;font-size:16px;box-shadow:none}
+.ng-footer__brand strong{color:#fff;font-size:16px}
+.ng-footer__about{font-size:13.5px;line-height:1.8;color:#b9a2ac;max-width:330px}
+.ng-footer__bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,246,234,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#9c8893}
+
+/* ---------- 弹窗 / Toast / 回顶 ---------- */
+.ng-modal{position:fixed;inset:0;background:rgba(30,18,24,.55);backdrop-filter:blur(4px);display:none;place-items:center;z-index:120;padding:20px}
+.ng-modal.ng-is-show{display:grid}
+.ng-modal__box{background:#fff;border-radius:20px;max-width:530px;width:100%;padding:26px;box-shadow:0 26px 60px rgba(0,0,0,.3);max-height:86vh;overflow:auto}
+.ng-modal__head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px}
+.ng-modal__head h3{font-size:18px}
+.ng-modal__close{border:0;background:#f4e7e0;color:var(--ng-ink-soft);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;line-height:1;font-family:inherit}
+.ng-modal__close:hover{background:#fbd9cd;color:var(--ng-pink-deep)}
+.ng-form{display:grid;gap:12px}
+.ng-form label{font-size:13.5px;font-weight:700;display:block;margin-bottom:5px}
+.ng-form input,.ng-form textarea,.ng-form select{width:100%;border:1.5px solid var(--ng-line);border-radius:11px;padding:10px 13px;font-size:14px;font-family:inherit;outline:0;background:#fffdfa;color:var(--ng-ink)}
+.ng-form input:focus,.ng-form textarea:focus,.ng-form select:focus{border-color:var(--ng-pink);box-shadow:0 0 0 3px rgba(226,55,107,.1)}
+.ng-form textarea{min-height:92px;resize:vertical}
+.ng-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#2b1f27;color:#fff6ea;font-size:14px;padding:11px 22px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:.3s;z-index:200;max-width:88vw;text-align:center}
+.ng-toast.ng-is-show{opacity:1;transform:translate(-50%,0)}
+.ng-top{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--ng-pink),var(--ng-coral));color:#fff;font-size:19px;cursor:pointer;box-shadow:0 12px 26px rgba(226,55,107,.36);opacity:0;pointer-events:none;transition:.3s;z-index:90;font-family:inherit}
+.ng-top.ng-is-show{opacity:1;pointer-events:auto}
+.ng-top:hover{transform:translateY(-3px)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+  .ng-hero__grid,.ng-about__grid,.ng-focus__grid,.ng-contact__card,.ng-news{grid-template-columns:1fr}
+  .ng-flow__grid,.ng-topics,.ng-creators,.ng-words,.ng-rank__grid{grid-template-columns:repeat(2,1fr)}
+  .ng-footer__grid{grid-template-columns:1fr 1fr}
+  .ng-hero__float{display:none}
+}
+@media (max-width:820px){
+  :root{--ng-sticky:96px}
+  .ng-nav{display:none;order:4;flex:1 1 100%;flex-direction:column;gap:2px;padding:10px 0 4px}
+  .ng-header.ng-is-open .ng-nav{display:flex}
+  .ng-nav a{padding:10px 12px;border-radius:10px;font-size:15px}
+  .ng-burger{display:block;order:5}
+  .ng-search{order:3;margin-left:auto}
+  .ng-search input{width:104px}
+  .ng-header__inner{flex-wrap:wrap;gap:12px}
+  .ng-search-feedback{order:6;flex:1 1 100%}
+  .ng-notice__list{gap:8px;font-size:12.5px}
+  .ng-notice__item:nth-child(n+3){display:none}
+}
+@media (max-width:640px){
+  .ng-section{padding:44px 0}
+  .ng-flow__grid,.ng-topics,.ng-creators,.ng-words,.ng-rank__grid,.ng-faq__grid,.ng-hero__stats,.ng-stats,.ng-partners,.ng-footer__grid{grid-template-columns:1fr}
+  .ng-hero__title{font-size:clamp(34px,10vw,48px)}
+  .ng-contact__card{padding:26px}
+  .ng-notice__more{display:none}
+  .ng-search input{width:86px}
+  .ng-top{right:14px;bottom:16px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="ng-sticky-stack">
+  <div class="ng-notice" role="region" aria-label="站内更新公告">
+    <div class="ng-wrap ng-notice__inner">
+      <span class="ng-notice__tag">NEW</span>
+      <div class="ng-notice__list">
+        <span class="ng-notice__item"><b>11/19 上新</b>「年终话题复盘」企划第 3 期已发布</span>
+        <span class="ng-notice__item"><b>11/17 招募</b>创作者合伙人计划第 12 期开放报名</span>
+        <span class="ng-notice__item"><b>11/15 更新</b>话题投票榜新增「口碑内容」榜单</span>
+      </div>
+      <a class="ng-notice__more" href="#ng-news">查看动态 ›</a>
+    </div>
+  </div>
+
+  <header class="ng-header" id="ng-header">
+    <div class="ng-wrap ng-header__inner">
+      <a class="ng-brand" href="#ng-hero" aria-label="nana今日吃瓜首页">
+        <div class="ng-brand__mark">nana</div>
+        <div class="ng-brand__text">
+          <strong>nana今日吃瓜</strong>
+          <span>ENTERTAINMENT WATCH</span>
+        </div>
+      </a>
+      <nav class="ng-nav" id="ng-nav" aria-label="主导航">
+        <a href="#ng-hero" class="ng-is-active">首页</a>
+        <a href="#ng-focus">焦点内容</a>
+        <a href="#ng-flow">热门视频</a>
+        <a href="#ng-topics">专题企划</a>
+        <a href="#ng-creators">创作者</a>
+        <a href="#ng-rank">榜单</a>
+        <a href="#ng-news">企业动态</a>
+        <a href="#ng-faq">帮助</a>
+        <a href="#ng-contact">联系与投稿</a>
+      </nav>
+      <div class="ng-search">
+        <div class="ng-search__box">
+          <input id="ng-search-input" type="search" placeholder="搜索话题 / 创作者" aria-label="站内搜索">
+          <button class="ng-search__btn" id="ng-search-btn" type="button">搜索</button>
+        </div>
+      </div>
+      <button class="ng-burger" id="ng-burger" type="button" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <p class="ng-search-feedback" id="ng-search-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="ng-hero" id="ng-hero">
+    <div class="ng-wrap ng-hero__grid">
+      <div>
+        <span class="ng-eyebrow">官方网站 · 品牌门户</span>
+        <h1 class="ng-hero__title">nana今日吃瓜</h1>
+        <p class="ng-hero__sub">娱乐观察社区 · 原创精品视频内容平台</p>
+        <p class="ng-hero__desc">
+          作为持续运营的娱乐话题观察品牌，我们以官方发布与原创内容为核心，为创作者与用户搭建高品质内容生态。在这里，热点被梳理成脉络，话题被还原成故事，每一次围观都值得被认真对待。
+        </p>
+        <div class="ng-hero__cta">
+          <a class="ng-btn ng-btn--primary" href="#ng-focus">进入焦点内容</a>
+          <a class="ng-btn ng-btn--ghost" href="#ng-creators">认识创作者</a>
+          <button class="ng-btn ng-btn--ghost" type="button" data-ng-open="submit">我要投稿</button>
+        </div>
+        <div class="ng-stats">
+          <div class="ng-stats__item">
+            <div class="ng-stats__num" data-ng-count="1286">0</div>
+            <div class="ng-stats__label">原创视频内容（条）</div>
+          </div>
+          <div class="ng-stats__item">
+            <div class="ng-stats__num" data-ng-count="342">0</div>
+            <div class="ng-stats__label">签约创作者（位）</div>
+          </div>
+          <div class="ng-stats__item">
+            <div class="ng-stats__num" data-ng-count="96">0</div>
+            <div class="ng-stats__label">专题企划（期）</div>
+          </div>
+        </div>
+      </div>
+      <div class="ng-hero__visual">
+        <div class="ng-hero__cover">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a6b'/%3E%3Cstop offset='0.55' stop-color='%23e2376b'/%3E%3Cstop offset='1' stop-color='%236b2f63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='600' cy='150' r='150' fill='%23ffe3b8' opacity='0.35'/%3E%3Ccircle cx='640' cy='140' r='86' fill='%23fff2d6' opacity='0.6'/%3E%3Cpath d='M0 470 q180 -120 380 -30 t420 -60 v220 H0 Z' fill='%23f9d7c8' opacity='0.5'/%3E%3Cg fill='%23fff6ea'%3E%3Crect x='90' y='330' width='250' height='150' rx='18' opacity='0.92'/%3E%3C/g%3E%3Cg fill='%23e2376b'%3E%3Ccircle cx='150' cy='392' r='26'/%3E%3Crect x='196' y='368' width='112' height='13' rx='6'/%3E%3Crect x='196' y='396' width='84' height='10' rx='5' opacity='0.7'/%3E%3Crect x='196' y='418' width='66' height='10' rx='5' opacity='0.5'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.85'%3E%3Ccircle cx='520' cy='410' r='46'/%3E%3Cpath d='M510 392 l30 18 -30 18 z' fill='%23e2376b'/%3E%3C/g%3E%3Cg stroke='%23fff6ea' stroke-width='5' opacity='0.5' fill='none'%3E%3Cpath d='M420 250 q60 -40 120 0'/%3E%3Cpath d='M440 208 q50 -34 100 0'/%3E%3C/g%3E%3C/svg%3E" alt="nana今日吃瓜品牌主视觉：话题卡片与播放标识构成的娱乐观察画面" width="800" height="600">
+          <div class="ng-hero__shade"></div>
+          <div class="ng-hero__badge"><span class="ng-hero__dot"></span>官方发布 · 正在更新</div>
+        </div>
+        <div class="ng-hero__float">
+          <div><b>11.19</b><span>话题沸点日榜</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析 -->
+  <section class="ng-section ng-section--tint" id="ng-about">
+    <div class="ng-wrap">
+      <div class="ng-about__grid">
+        <div class="ng-about__text">
+          <span class="ng-eyebrow">品牌定位与深度解析</span>
+          <h2 class="ng-h2">nana今日吃瓜，把围观变成可溯源的内容</h2>
+          <p>「nana今日吃瓜」是一家以娱乐话题观察为核心的视频内容品牌官方网站。在信息高速流动的当下，热点每天都在产生，但真正被理解、被记录、被复盘的热点却不多。我们做的事情并不复杂：把散落在各处的讨论收拢起来，用原创视频、访谈、时间线梳理和冷静的旁白，替用户把一件事的来龙去脉说清楚。作为行业领先的娱乐内容平台，我们坚持正版素材授权、清晰信源标注与专业剪辑流程，让每一条内容都经得起回看。</p>
+          <p>品牌自创立以来，始终围绕<b>「观察话题，也观察人」</b>这一理念深耕。我们把内容分成四层：第一层是<b>速览</b>，用三到五分钟讲清一个话题的关键节点；第二层是<b>复盘</b>，把时间线、人物关系、舆论拐点做成一目了然的视觉化图表；第三层是<b>访谈</b>，邀请当事人、行业从业者、长期观察者坐下来聊透；第四层是<b>社区</b>，把用户的讨论、二次创作与观点投票沉淀为可持续的内容生态。四层结构让 nana今日吃瓜 既具备媒体的严谨，也保留了社区的活力与温度。</p>
+          <p>我们相信，娱乐话题并非轻飘飘的消遣。一个话题背后往往牵涉传播机制、公众情绪、行业规则和表达边界。因此平台在内容生产上设置了编辑复核机制：事实类信息需双源交叉确认，观点类内容标注作者身份，推测性表述必须明确提示，涉及未成年人、隐私与未经证实的信息一律不下场、不放大。这套流程让 nana今日吃瓜 在快速响应的同时，保持对真实与善意的尊重，也让品牌口碑在长期运营中逐步累积。</p>
+          <p>创作者是内容生态的根基。我们推出创作者合伙人计划，为签约作者提供选题库、剪辑工具、法务支持与流量分成，鼓励多元表达与创新形式：有人擅长用十分钟长视频做深度复盘，有人用六十秒短视频做信息速递，有人专注访谈中的沉默与停顿，也有人用插画还原事件现场。不同风格在这里被包容，不同阶段的创作者都能获得成长与陪伴。平台每季度举办一次主题创作挑战赛，开放报名与上传通道，优秀作品将进入官方精品内容池，并获得专题推荐位。</p>
+          <p>对于用户，nana今日吃瓜 是了解话题的可信入口。我们上线了话题脉络页、热度时间轴、观点投票与口碑榜单，用户可以按兴趣筛选、收藏、分享，也可以进入评论区与作者直接对话。我们坚持用户至上，不做诱导式弹窗，不制造焦虑式标题，不做无来源的二次传播。内容页提供清晰的信源与更新时间，帮助用户判断信息的新鲜度与可信度。这些看似基础的细节，正是垂直领域内容平台最应该守住的底线。</p>
+          <p>对企业与合作伙伴，nana今日吃瓜 提供品牌故事定制、话题共创、线下沙龙与内容联合出品等合作形式。我们已与多家内容机构、数据服务方、公益组织建立长期协作，共同推动娱乐话题讨论的理性化与专业化。未来，平台将继续深耕内容品质，扩展创作者矩阵，完善社区治理，把「值得信赖的娱乐观察入口」这件事做得更扎实。官网将持续发布企业动态与官方公告，欢迎关注并参与共建。</p>
+          <div class="ng-tags">
+            <span class="ng-tag">娱乐观察</span>
+            <span class="ng-tag ng-tag--mint">原创视频</span>
+            <span class="ng-tag ng-tag--gold">话题复盘</span>
+            <span class="ng-tag">创作者社区</span>
+            <span class="ng-tag ng-tag--mint">行业访谈</span>
+            <span class="ng-tag ng-tag--gold">口碑榜单</span>
+          </div>
+        </div>
+        <aside class="ng-about__aside">
+          <h3>平台速览</h3>
+          <ul class="ng-about__list">
+            <li><i>1</i><span><b>品牌属性：</b>娱乐话题观察与原创视频内容平台官方网站</span></li>
+            <li><i>2</i><span><b>内容形态：</b>速览、复盘、访谈、社区共创四层结构</span></li>
+            <li><i>3</i><span><b>更新节奏：</b>工作日每日更新，专题企划每周一期</span></li>
+            <li><i>4</i><span><b>创作支持：</b>选题库、剪辑工具、法务支持与流量分成</span></li>
+            <li><i>5</i><span><b>社区原则：</b>信源可查、观点署名、尊重隐私、拒绝失真</span></li>
+            <li><i>6</i><span><b>合作方向：</b>话题共创、品牌故事、联合出品、线下沙龙</span></li>
+          </ul>
+          <a class="ng-btn ng-btn--primary" href="#ng-contact" style="width:100%;justify-content:center;margin-top:18px">商务与合作咨询</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="ng-section" id="ng-focus">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">焦点内容</span>
+          <h2 class="ng-h2">今日必看：两条主线，四个观察切口</h2>
+          <p class="ng-lead">编辑团队从当日话题池中筛选出最具讨论价值的作品，兼顾信息密度与叙事质感。</p>
+        </div>
+        <a class="ng-btn ng-btn--ghost" href="#ng-flow">浏览全部内容</a>
+      </div>
+      <div class="ng-focus__grid">
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b1f27'/%3E%3Cstop offset='1' stop-color='%236b2f63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Cg stroke='%23ff9db6' stroke-width='2' opacity='0.5'%3E%3Cpath d='M0 340 L140 250 L260 310 L400 190 L540 260 L680 150 L800 210' fill='none'/%3E%3C/g%3E%3Cg fill='%23ff7a59'%3E%3Ccircle cx='140' cy='250' r='8'/%3E%3Ccircle cx='400' cy='190' r='10'/%3E%3Ccircle cx='680' cy='150' r='8'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.9'%3E%3Crect x='60' y='60' width='210' height='12' rx='6'/%3E%3Crect x='60' y='88' width='140' height='9' rx='4.5' opacity='0.6'/%3E%3C/g%3E%3Cg fill='%23e2376b'%3E%3Crect x='60' y='380' width='96' height='26' rx='13' opacity='0.9'/%3E%3C/g%3E%3C/svg%3E" alt="焦点视频封面：话题热度曲线与时间轴复盘画面" width="800" height="450">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">深度复盘</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>时长 18:24</span><span>3.2 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <h3 class="ng-card__title ng-card__title--lg">一场话题的七十二小时：从爆料到澄清的舆论拐点</h3>
+            <p class="ng-card__desc">把三天内的公开信息按小时重排，标注每条内容的原始出处与传播路径，讨论「第一条可信信息」究竟出现在什么时刻。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-1">南</span>南枝观察室</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>428</b></button>
+                <button class="ng-op" type="button" data-ng-save>收藏</button>
+                <button class="ng-op" type="button" data-ng-share>分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="ng-focus__side">
+          <article class="ng-card">
+            <div class="ng-card__thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232fa38b'/%3E%3Cstop offset='1' stop-color='%23d7f0e6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f2)'/%3E%3Cg fill='%230d3b32' opacity='0.85'%3E%3Ccircle cx='250' cy='225' r='85'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Ccircle cx='250' cy='200' r='30'/%3E%3Crect x='228' y='238' width='44' height='30' rx='14'/%3E%3C/g%3E%3Cg fill='%230d3b32'%3E%3Crect x='380' y='150' width='300' height='16' rx='8' opacity='0.9'/%3E%3Crect x='380' y='188' width='220' height='11' rx='5.5' opacity='0.6'/%3E%3Crect x='380' y='216' width='250' height='11' rx='5.5' opacity='0.45'/%3E%3Crect x='380' y='266' width='120' height='30' rx='15' opacity='0.85'/%3E%3C/g%3E%3Cg stroke='%230d3b32' stroke-width='4' opacity='0.4' fill='none'%3E%3Cpath d='M540 350 q80 -40 150 10'/%3E%3C/g%3E%3C/svg%3E" alt="焦点视频封面：访谈场景中的对话者与文字信息层次" width="800" height="450">
+              <span class="ng-card__shade"></span>
+              <span class="ng-card__label">人物访谈</span>
+              <div class="ng-card__meta-on"><span>时长 26:10</span><span>1.8 万次播放</span></div>
+            </div>
+            <div class="ng-card__body">
+              <h3 class="ng-card__title">和三位从业者聊聊：话题营销的边界在哪里</h3>
+              <div class="ng-card__foot">
+                <div class="ng-author-mini"><span class="ng-avatar ng-av-2">柚</span>柚子访谈录</div>
+                <div class="ng-ops"><button class="ng-op" type="button" data-ng-like>赞 <b>276</b></button></div>
+              </div>
+            </div>
+          </article>
+          <article class="ng-card">
+            <div class="ng-card__thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e9a93d'/%3E%3Cstop offset='1' stop-color='%23fde3b5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f3)'/%3E%3Cg fill='%235a3d05'%3E%3Crect x='80' y='90' width='280' height='20' rx='10'/%3E%3Crect x='80' y='130' width='200' height='12' rx='6' opacity='0.65'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='80' y='190' width='150' height='150' rx='16'/%3E%3Crect x='250' y='190' width='150' height='150' rx='16' opacity='0.85'/%3E%3Crect x='420' y='190' width='150' height='150' rx='16' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23e2376b'%3E%3Ccircle cx='155' cy='265' r='26'/%3E%3Ccircle cx='325' cy='265' r='26' opacity='0.8'/%3E%3Ccircle cx='495' cy='265' r='26' opacity='0.65'/%3E%3C/g%3E%3Cg fill='%235a3d05' opacity='0.55'%3E%3Crect x='600' y='190' width='120' height='16' rx='8'/%3E%3Crect x='600' y='220' width='90' height='11' rx='5.5'/%3E%3Crect x='600' y='246' width='110' height='11' rx='5.5'/%3E%3C/g%3E%3C/svg%3E" alt="焦点视频封面：口碑榜单卡片与评分图块排列" width="800" height="450">
+              <span class="ng-card__shade"></span>
+              <span class="ng-card__label">口碑榜单</span>
+              <div class="ng-card__meta-on"><span>时长 09:42</span><span>2.4 万次播放</span></div>
+            </div>
+            <div class="ng-card__body">
+              <h3 class="ng-card__title">本周口碑内容榜：五个被反复回看的细节</h3>
+              <div class="ng-card__foot">
+                <div class="ng-author-mini"><span class="ng-avatar ng-av-4">麦</span>麦穗编辑部</div>
+                <div class="ng-ops"><button class="ng-op" type="button" data-ng-save>收藏</button></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="ng-section ng-section--tint" id="ng-flow">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">热门视频流</span>
+          <h2 class="ng-h2">六条内容，六种打开话题的方式</h2>
+          <p class="ng-lead">短视频速递、长视频复盘、现场记录与创作幕后，总有一种节奏适合你。</p>
+        </div>
+        <div class="ng-tags" style="margin-top:0">
+          <span class="ng-tag">速览</span>
+          <span class="ng-tag ng-tag--mint">复盘</span>
+          <span class="ng-tag ng-tag--gold">访谈</span>
+        </div>
+      </div>
+      <div class="ng-flow__grid">
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%233b7dd8'/%3E%3Cg fill='%23dbe9ff'%3E%3Ccircle cx='620' cy='120' r='96' opacity='0.4'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='70' y='90' width='260' height='18' rx='9'/%3E%3Crect x='70' y='128' width='180' height='12' rx='6' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='70' y='200' width='660' height='210' rx='20' opacity='0.14'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='210' cy='305' r='52'/%3E%3Cpath d='M196 278 l44 27 -44 27 z' fill='%233b7dd8'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.8'%3E%3Crect x='300' y='266' width='330' height='15' rx='7.5'/%3E%3Crect x='300' y='300' width='250' height='11' rx='5.5' opacity='0.65'/%3E%3Crect x='300' y='330' width='290' height='11' rx='5.5' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：短视频速递界面与蓝色信息卡片" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">速览</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>04:12</span><span>8.7 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft">三分钟说清</span>
+            <h3 class="ng-card__title" style="margin-top:9px">六十分钟内刷屏的三条消息，哪些能确认</h3>
+            <p class="ng-card__desc">逐条核对信源，标注「已确认」「待核实」「不成立」三种状态。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-5">林</span>林间速报</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>612</b></button>
+                <button class="ng-op" type="button" data-ng-save>收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23fff2d6'/%3E%3Cg fill='%23e2376b' opacity='0.9'%3E%3Crect x='0' y='360' width='800' height='140'/%3E%3C/g%3E%3Cg fill='%23231a20'%3E%3Crect x='70' y='80' width='220' height='20' rx='10'/%3E%3Crect x='70' y='118' width='150' height='12' rx='6' opacity='0.6'/%3E%3C/g%3E%3Cg fill='%23231a20' opacity='0.8'%3E%3Ccircle cx='200' cy='262' r='70'/%3E%3Crect x='180' y='318' width='40' height='46' rx='18'/%3E%3C/g%3E%3Cg stroke='%23231a20' stroke-width='6' opacity='0.5' fill='none'%3E%3Cpath d='M330 220 q70 -50 140 0 t140 0'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='360' y='300' width='340' height='16' rx='8'/%3E%3Crect x='360' y='330' width='260' height='11' rx='5.5' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：温暖色调的现场记录与人物剪影" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">现场</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>12:36</span><span>5.1 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft ng-badge-soft--pink">现场记录</span>
+            <h3 class="ng-card__title" style="margin-top:9px">活动散场之后：镜头留在门口的十五分钟</h3>
+            <p class="ng-card__desc">不追逐明星，只记录普通观众的真实反应与秩序恢复过程。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-6">晚</span>晚安记录仪</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>389</b></button>
+                <button class="ng-op" type="button" data-ng-share>分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%232fa38b'/%3E%3Cg fill='%23d7f0e6' opacity='0.9'%3E%3Crect x='60' y='80' width='680' height='340' rx='24'/%3E%3C/g%3E%3Cg fill='%232fa38b'%3E%3Crect x='100' y='120' width='180' height='14' rx='7'/%3E%3Crect x='100' y='152' width='120' height='10' rx='5'/%3E%3C/g%3E%3Cg fill='%232fa38b' opacity='0.75'%3E%3Crect x='100' y='200' width='270' height='14' rx='7'/%3E%3Crect x='100' y='232' width='220' height='14' rx='7'/%3E%3Crect x='100' y='264' width='170' height='14' rx='7'/%3E%3C/g%3E%3Cg fill='%23e2376b'%3E%3Crect x='430' y='190' width='250' height='90' rx='14'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Ccircle cx='470' cy='235' r='20'/%3E%3Crect x='504' y='222' width='140' height='10' rx='5'/%3E%3Crect x='504' y='244' width='96' height='8' rx='4' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%232fa38b'%3E%3Crect x='430' y='310' width='250' height='70' rx='14' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：绿色背景下的创作分工与流程清单" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">幕后</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>15:08</span><span>3.6 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft">创作幕后</span>
+            <h3 class="ng-card__title" style="margin-top:9px">我们如何在一个下午做完一条话题复盘视频</h3>
+            <p class="ng-card__desc">从选题会到成片的全流程，含剪辑时间轴与三处返工说明。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-2">柚</span>柚子访谈录</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>233</b></button>
+                <button class="ng-op" type="button" data-ng-save>收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%236a5acd'/%3E%3Cg fill='%23e8e3ff' opacity='0.35'%3E%3Ccircle cx='150' cy='150' r='110'/%3E%3Ccircle cx='680' cy='380' r='140'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='90' y='110' width='240' height='18' rx='9'/%3E%3Crect x='90' y='146' width='170' height='11' rx='5.5' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.92'%3E%3Crect x='90' y='210' width='620' height='190' rx='18'/%3E%3C/g%3E%3Cg fill='%236a5acd'%3E%3Ccircle cx='180' cy='305' r='42'/%3E%3Ccircle cx='300' cy='305' r='42' opacity='0.8'/%3E%3Ccircle cx='420' cy='305' r='42' opacity='0.6'/%3E%3Ccircle cx='540' cy='305' r='42' opacity='0.45'/%3E%3C/g%3E%3Cg fill='%23e2376b'%3E%3Crect x='600' y='230' width='80' height='24' rx='12'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：紫色调人物关系图与多方视角排列" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">人物</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>21:44</span><span>6.2 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft ng-badge-soft--pink">人物脉络</span>
+            <h3 class="ng-card__title" style="margin-top:9px">四张关系图，看懂这场风波里的每个角色</h3>
+            <p class="ng-card__desc">只使用公开可查的信息，标注每一处推断的依据与不确定性。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-3">图</span>图谱工作室</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>756</b></button>
+                <button class="ng-op" type="button" data-ng-save>收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23d94f70'/%3E%3Cg fill='%23ffe0e7' opacity='0.55'%3E%3Crect x='0' y='330' width='800' height='170'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='80' y='90' width='280' height='20' rx='10'/%3E%3Crect x='80' y='130' width='190' height='12' rx='6' opacity='0.75'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.9'%3E%3Ccircle cx='210' cy='290' r='78'/%3E%3C/g%3E%3Cg fill='%23d94f70'%3E%3Ccircle cx='190' cy='275' r='7'/%3E%3Ccircle cx='230' cy='275' r='7'/%3E%3Cpath d='M190 310 q20 16 40 0' stroke='%23d94f70' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='360' y='230' width='360' height='16' rx='8'/%3E%3Crect x='360' y='264' width='290' height='12' rx='6' opacity='0.7'/%3E%3Crect x='360' y='296' width='320' height='12' rx='6' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：粉色背景下的情绪观察与表情插画" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">情绪</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>07:50</span><span>4.4 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft">观察随笔</span>
+            <h3 class="ng-card__title" style="margin-top:9px">围观者的表情：我们在评论区里寻找什么</h3>
+            <p class="ng-card__desc">把三百条评论按情绪归类，讨论围观行为背后的真实需求。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-6">晚</span>晚安记录仪</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>501</b></button>
+                <button class="ng-op" type="button" data-ng-share>分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="ng-card">
+          <div class="ng-card__thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23e9a93d'/%3E%3Cg fill='%23fff3d8' opacity='0.6'%3E%3Ccircle cx='660' cy='110' r='130'/%3E%3C/g%3E%3Cg fill='%235a3d05'%3E%3Crect x='80' y='96' width='250' height='20' rx='10'/%3E%3Crect x='80' y='134' width='160' height='12' rx='6' opacity='0.6'/%3E%3C/g%3E%3Cg fill='%23fff6ea'%3E%3Crect x='80' y='200' width='300' height='220' rx='18'/%3E%3Crect x='410' y='200' width='300' height='220' rx='18' opacity='0.72'/%3E%3C/g%3E%3Cg fill='%23e9a93d'%3E%3Ccircle cx='230' cy='300' r='52'/%3E%3C/g%3E%3Cg fill='%235a3d05' opacity='0.7'%3E%3Crect x='430' y='260' width='240' height='14' rx='7'/%3E%3Crect x='430' y='292' width='180' height='11' rx='5.5'/%3E%3Crect x='430' y='320' width='210' height='11' rx='5.5'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：金色调榜单对比与内容卡片" width="800" height="500">
+            <span class="ng-card__shade"></span>
+            <span class="ng-card__label">对比</span>
+            <span class="ng-card__play" aria-hidden="true"></span>
+            <div class="ng-card__meta-on"><span>10:19</span><span>2.9 万次播放</span></div>
+          </div>
+          <div class="ng-card__body">
+            <span class="ng-badge-soft ng-badge-soft--gold">横向测评</span>
+            <h3 class="ng-card__title" style="margin-top:9px">同题不同讲：五个账号的复盘方式差异有多大</h3>
+            <p class="ng-card__desc">从叙事结构、信息密度与情绪控制三个维度横向对比。</p>
+            <div class="ng-card__foot">
+              <div class="ng-author-mini"><span class="ng-avatar ng-av-4">麦</span>麦穗编辑部</div>
+              <div class="ng-ops">
+                <button class="ng-op" type="button" data-ng-like>赞 <b>318</b></button>
+                <button class="ng-op" type="button" data-ng-save>收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="ng-section" id="ng-topics">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">专题企划</span>
+          <h2 class="ng-h2">三组长期企划，持续更新中</h2>
+          <p class="ng-lead">我们用整季的篇幅跟踪一个主题，让讨论不停留在热搜的二十四小时。</p>
+        </div>
+      </div>
+      <div class="ng-topics">
+        <article class="ng-topic">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b1f27'/%3E%3Cstop offset='1' stop-color='%23b0204f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='500' fill='url(%23t1)'/%3E%3Cg stroke='%23ff9db6' stroke-width='3' fill='none' opacity='0.55'%3E%3Ccircle cx='300' cy='200' r='110'/%3E%3Ccircle cx='300' cy='200' r='72'/%3E%3Ccircle cx='300' cy='200' r='36'/%3E%3C/g%3E%3Cg fill='%23ff7a59'%3E%3Ccircle cx='300' cy='200' r='12'/%3E%3C/g%3E%3Cg fill='%23fff6ea' opacity='0.85'%3E%3Crect x='80' y='380' width='180' height='14' rx='7'/%3E%3Crect x='80' y='408' width='120' height='9' rx='4.5' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：年度话题时间轴与传播扩散同心圆" width="600" height="500">
+          <span class="ng-topic__shade"></span>
+          <div class="ng-topic__in">
+            <span class="ng-topic__status">更新至第 12 期</span>
+            <h3>年度话题复盘：热搜的十二种形状</h3>
+            <p>按月拆解全年讨论度最高的话题结构，回答它们为何被记住。</p>
+          </div>
+        </article>
+        <article class="ng-topic">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Cdefs%3E%3ClinearGradient id='t2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232fa38b'/%3E%3Cstop offset='1' stop-color='%23223f4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='500' fill='url(%23t2)'/%3E%3Cg fill='%23d7f0e6' opacity='0.85'%3E%3Crect x='90' y='110' width='420' height='16' rx='8'/%3E%3Crect x='90' y='152' width='320' height='12' rx='6' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23d7f0e6'%3E%3Crect x='90' y='220' width='120' height='120' rx='14' opacity='0.9'/%3E%3Crect x='230' y='220' width='120' height='120' rx='14' opacity='0.65'/%3E%3Crect x='370' y='220' width='120' height='120' rx='14' opacity='0.4'/%3E%3C/g%3E%3Cg fill='%232fa38b'%3E%3Ccircle cx='150' cy='280' r='24'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：创作者幕后工作台与分步流程方块" width="600" height="500">
+          <span class="ng-topic__shade"></span>
+          <div class="ng-topic__in">
+            <span class="ng-topic__status">每周五更新</span>
+            <h3>镜头背后的人：创作者工作流</h3>
+            <p>走进六位创作者的日常，看一条内容从想法到发布的完整路径。</p>
+          </div>
+        </article>
+        <article class="ng-topic">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Cdefs%3E%3ClinearGradient id='t3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e9a93d'/%3E%3Cstop offset='1' stop-color='%23d94f70'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='500' fill='url(%23t3)'/%3E%3Cg fill='%23fff6ea' opacity='0.9'%3E%3Crect x='100' y='100' width='400' height='300' rx='20'/%3E%3C/g%3E%3Cg fill='%23d94f70'%3E%3Crect x='140' y='150' width='150' height='14' rx='7'/%3E%3Crect x='140' y='182' width='220' height='14' rx='7' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23d94f70' opacity='0.55'%3E%3Crect x='140' y='240' width='320' height='10' rx='5'/%3E%3Crect x='140' y='268' width='280' height='10' rx='5'/%3E%3Crect x='140' y='296' width='300' height='10' rx='5'/%3E%3C/g%3E%3Cg fill='%232b1f27'%3E%3Crect x='140' y='340' width='110' height='30' rx='15'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：规则讨论文档与投票选项界面" width="600" height="500">
+          <span class="ng-topic__shade"></span>
+          <div class="ng-topic__in">
+            <span class="ng-topic__status">开放投票中</span>
+            <h3>围观的分寸：社区讨论规则共创</h3>
+            <p>把规则制定权交给用户，投票、报名、提案，一起写社区公约。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="ng-section ng-section--tint" id="ng-creators">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">创作者矩阵</span>
+          <h2 class="ng-h2">六位长期创作者，六种观察角度</h2>
+          <p class="ng-lead">他们来自不同背景，但对真实与专业的坚持一致。点击卡片可以查看作者档案。</p>
+        </div>
+      </div>
+      <div class="ng-creators">
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-1">南</div>
+            <div><div class="ng-creator__name">南枝观察室</div><div class="ng-creator__field">深度复盘 · 时间线梳理</div></div>
+          </div>
+          <p class="ng-creator__desc">前媒体编辑，擅长把碎片信息重排成具备因果关系的叙事，主张「先对齐事实，再讨论观点」。</p>
+          <div class="ng-creator__nums"><div><b>186</b>作品</div><div><b>24.6万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="南枝观察室">查看作者档案</button>
+        </article>
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-2">柚</div>
+            <div><div class="ng-creator__name">柚子访谈录</div><div class="ng-creator__field">人物访谈 · 行业观察</div></div>
+          </div>
+          <p class="ng-creator__desc">做了七年人物访谈，偏爱沉默和停顿。相信一场好对话不靠追问，而靠留白与倾听。</p>
+          <div class="ng-creator__nums"><div><b>92</b>作品</div><div><b>15.2万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="柚子访谈录">查看作者档案</button>
+        </article>
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-3">图</div>
+            <div><div class="ng-creator__name">图谱工作室</div><div class="ng-creator__field">数据可视化 · 关系梳理</div></div>
+          </div>
+          <p class="ng-creator__desc">由两名设计师与一名数据分析师组成，用图表还原复杂关系，每张图都附来源说明。</p>
+          <div class="ng-creator__nums"><div><b>64</b>作品</div><div><b>11.8万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="图谱工作室">查看作者档案</button>
+        </article>
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-4">麦</div>
+            <div><div class="ng-creator__name">麦穗编辑部</div><div class="ng-creator__field">榜单测评 · 品质口碑</div></div>
+          </div>
+          <p class="ng-creator__desc">专注横向对比与榜单运营，坚持同一套评价维度，接受读者对评分标准的公开质询。</p>
+          <div class="ng-creator__nums"><div><b>128</b>作品</div><div><b>19.4万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="麦穗编辑部">查看作者档案</button>
+        </article>
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-5">林</div>
+            <div><div class="ng-creator__name">林间速报</div><div class="ng-creator__field">速览快讯 · 信源核对</div></div>
+          </div>
+          <p class="ng-creator__desc">三分钟内讲清一件事是硬功夫。每条内容标注信息状态，宁可少说，也不含糊。</p>
+          <div class="ng-creator__nums"><div><b>240</b>作品</div><div><b>32.1万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="林间速报">查看作者档案</button>
+        </article>
+        <article class="ng-creator">
+          <div class="ng-creator__top">
+            <div class="ng-creator__av ng-av-6">晚</div>
+            <div><div class="ng-creator__name">晚安记录仪</div><div class="ng-creator__field">现场记录 · 情绪观察</div></div>
+          </div>
+          <p class="ng-creator__desc">喜欢拍散场、拍门口、拍人群退去后的样子。她说热度会降温，但人的表情不会说谎。</p>
+          <div class="ng-creator__nums"><div><b>76</b>作品</div><div><b>9.7万</b>关注</div></div>
+          <button class="ng-btn ng-btn--ghost ng-creator__btn" type="button" data-ng-author="晚安记录仪">查看作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="ng-section ng-section--deep" id="ng-rank">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow" style="color:#f7b3c4">数据榜单</span>
+          <h2 class="ng-h2" style="color:#fff">三张榜单，看清本周的内容现场</h2>
+          <p class="ng-lead" style="color:#d8c3cb">榜单按周更新，数据来自公开的互动指标，仅作参考，不构成任何排名承诺。</p>
+        </div>
+        <button class="ng-btn ng-btn--ghost" type="button" data-ng-share style="border-color:rgba(255,246,234,.4);background:transparent;color:#fff6ea">分享榜单</button>
+      </div>
+      <div class="ng-rank__grid">
+        <div class="ng-rank">
+          <h3>热度榜 <span>本周</span></h3>
+          <ul>
+            <li><span class="ng-rank__no">1</span><span class="ng-rank__title">七十二小时舆论拐点复盘</span><span class="ng-rank__val">9.8</span></li>
+            <li><span class="ng-rank__no">2</span><span class="ng-rank__title">六十分钟内的三条消息核对</span><span class="ng-rank__val">9.5</span></li>
+            <li><span class="ng-rank__no">3</span><span class="ng-rank__title">四张关系图看懂各方角色</span><span class="ng-rank__val">9.3</span></li>
+            <li><span class="ng-rank__no">4</span><span class="ng-rank__title">活动散场后的十五分钟</span><span class="ng-rank__val">9.0</span></li>
+            <li><span class="ng-rank__no">5</span><span class="ng-rank__title">围观者的表情观察随笔</span><span class="ng-rank__val">8.7</span></li>
+          </ul>
+        </div>
+        <div class="ng-rank">
+          <h3>新人榜 <span>近 30 天</span></h3>
+          <ul>
+            <li><span class="ng-rank__no">1</span><span class="ng-rank__title">纸飞机短片计划</span><span class="ng-rank__val">↑12</span></li>
+            <li><span class="ng-rank__no">2</span><span class="ng-rank__title">深夜话题整理员</span><span class="ng-rank__val">↑9</span></li>
+            <li><span class="ng-rank__no">3</span><span class="ng-rank__title">一杯冰美式观察站</span><span class="ng-rank__val">↑8</span></li>
+            <li><span class="ng-rank__no">4</span><span class="ng-rank__title">小城话题电台</span><span class="ng-rank__val">↑6</span></li>
+            <li><span class="ng-rank__no">5</span><span class="ng-rank__title">冷静克制的剪辑师</span><span class="ng-rank__val">↑5</span></li>
+          </ul>
+        </div>
+        <div class="ng-rank">
+          <h3>口碑榜 <span>编辑推荐</span></h3>
+          <ul>
+            <li><span class="ng-rank__no">1</span><span class="ng-rank__title">和三位从业者聊聊话题营销边界</span><span class="ng-rank__val">★★★★★</span></li>
+            <li><span class="ng-rank__no">2</span><span class="ng-rank__title">我们如何在一个下午做完复盘</span><span class="ng-rank__val">★★★★★</span></li>
+            <li><span class="ng-rank__no">3</span><span class="ng-rank__title">同题不同讲的五种打开方式</span><span class="ng-rank__val">★★★★☆</span></li>
+            <li><span class="ng-rank__no">4</span><span class="ng-rank__title">五个被反复回看的细节</span><span class="ng-rank__val">★★★★☆</span></li>
+            <li><span class="ng-rank__no">5</span><span class="ng-rank__title">社区公约共创提案合集</span><span class="ng-rank__val">★★★★☆</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="ng-section" id="ng-words">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">社区声音</span>
+          <h2 class="ng-h2">他们这样描述在这里的体验</h2>
+          <p class="ng-lead">评价来自站内用户与合作伙伴，内容保持原貌，仅做错别字修正。</p>
+        </div>
+      </div>
+      <div class="ng-words">
+        <div class="ng-word">
+          <p>「最打动我的是时间线做得清楚。以前刷到消息只知道吵架，现在能看懂到底发生了什么，前后顺序是怎样的。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-2">青</span>青柠不加冰 <span>· 关注 8 个月</span></div>
+        </div>
+        <div class="ng-word">
+          <p>「作为同行，我比较在意信源标注。这里每条都会写清楚出处，不确定的部分会明说，这点很难得。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-3">周</span>周末剪辑师 <span>· 创作者</span></div>
+        </div>
+        <div class="ng-word">
+          <p>「访谈那几期我反复看了三遍。没有逼问，没有煽情，就是坐下来慢慢聊，反而更有力量。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-1">阿</span>阿栗栗 <span>· 关注 1 年</span></div>
+        </div>
+        <div class="ng-word">
+          <p>「投稿入口很友好，第一次上传就通过了，编辑还给了具体的修改建议，不是那种冷冰冰的模板回复。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-4">小</span>小满同学 <span>· 新投稿作者</span></div>
+        </div>
+        <div class="ng-word">
+          <p>「榜单评分维度是公开的，我提过的意见确实在下一期被采纳了，这种被认真对待的感觉很少见。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-6">白</span>白桃气泡水 <span>· 活跃用户</span></div>
+        </div>
+        <div class="ng-word">
+          <p>「合作过一次专题共创，流程清楚，排期透明，内容审核标准也提前给到了，合作体验比预期顺。」</p>
+          <div class="ng-word__who"><span class="ng-avatar ng-av-5">木</span>木棉内容机构 <span>· 合作方</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 合作伙伴 -->
+  <section class="ng-section ng-section--tint" id="ng-news">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">企业动态</span>
+          <h2 class="ng-h2">官方发布与近期更新</h2>
+          <p class="ng-lead">品牌资讯、规则调整与合作信息，统一在此发布，确保信息可追溯。</p>
+        </div>
+      </div>
+      <div class="ng-news">
+        <div>
+          <ul class="ng-news__list">
+            <li>
+              <span class="ng-news__date">11/19</span>
+              <div><div class="ng-news__title">「年终话题复盘」企划第 3 期上线</div><div class="ng-news__desc">本期聚焦话题传播中的二次加工现象，附完整信源清单。</div></div>
+            </li>
+            <li>
+              <span class="ng-news__date">11/17</span>
+              <div><div class="ng-news__title">创作者合伙人计划第 12 期开放报名</div><div class="ng-news__desc">本期招募 30 位创作者，提供选题支持与剪辑工具，报名截止 12 月 5 日。</div></div>
+            </li>
+            <li>
+              <span class="ng-news__date">11/15</span>
+              <div><div class="ng-news__title">社区讨论规则 2.0 开启公众意见征集</div><div class="ng-news__desc">新增关于未成年人保护与隐私信息的条款草案，欢迎投票与提案。</div></div>
+            </li>
+            <li>
+              <span class="ng-news__date">11/10</span>
+              <div><div class="ng-news__title">与三家内容机构达成联合出品合作</div><div class="ng-news__desc">合作方向涵盖深度访谈、数据可视化与线下沙龙共建。</div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="ng-partners">
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#e2376b,#ff7a59)">数</i>澄明数据</div>
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#2fa38b,#69d2b5);color:#0d3b32">镜</i>镜头语言学院</div>
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#6a5acd,#a08dfb)">编</i>编年内容机构</div>
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#e9a93d,#f7d07c);color:#5a3d05">微</i>微光公益</div>
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#3b7dd8,#7fb3f5)">声</i>声场音频</div>
+          <div class="ng-partner"><i style="background:linear-gradient(135deg,#d94f70,#f091a8)">城</i>城市观察联盟</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ng-section" id="ng-faq">
+    <div class="ng-wrap">
+      <div class="ng-head">
+        <div>
+          <span class="ng-eyebrow">帮助中心</span>
+          <h2 class="ng-h2">常见问题，先看这里</h2>
+          <p class="ng-lead">关于内容规范、投稿流程、版权与合作，我们把最常被问到的七个问题整理在此。</p>
+        </div>
+      </div>
+      <div class="ng-faq__grid">
+        <div class="ng-faq">
+          <details open>
+            <summary>如何判断站内内容的信息可信度？</summary>
+            <p>每条内容页都会标注信源清单与最后更新时间。事实类信息需双源交叉确认后才发布，推测性表述会以文字明确提示。如果发现信息有误，可通过内容页的反馈入口提交，我们会在核实后更新并注明修正记录。</p>
+          </details>
+          <details>
+            <summary>投稿需要什么条件？会收费吗？</summary>
+            <p>投稿完全免费。我们欢迎原创视频、图文脚本与话题线索。请确保内容为原创或已获得授权，不涉及未经证实的隐私信息。审核通常在七个工作日内完成，结果会通过站内消息通知。</p>
+          </details>
+          <details>
+            <summary>平台的素材使用遵循什么规则？</summary>
+            <p>站内作品使用正版授权素材或创作者自有素材，涉及第三方画面时会标注来源与使用范围。若权利人认为存在使用不当，可提交权属证明材料，我们将在核实后第一时间处理。</p>
+          </details>
+          <details>
+            <summary>评论区的管理标准是什么？</summary>
+            <p>我们鼓励具体、有理据的讨论，禁止人身攻击、恶意曝光隐私、传播未经证实的信息以及针对未成年人的不当言论。违规内容会被折叠或删除，情节严重者将限制发言权限。</p>
+          </details>
+        </div>
+        <div class="ng-faq">
+          <details>
+            <summary>创作者合伙人计划怎么加入？</summary>
+            <p>每期开放报名时会发布公告，填写创作者档案并提交两件代表作即可。我们更看重选题意识与表达稳定性，而非粉丝数量。入选后将获得选题库、剪辑工具、法务支持与流量分成方案。</p>
+          </details>
+          <details>
+            <summary>商务合作有哪些形式？</summary>
+            <p>包括品牌故事定制、话题共创、联合出品、线下沙龙与专题冠名等。我们不做诱导性内容，也不接受要求隐瞒信息来源的合作。具体排期与报价请通过商务邮箱沟通。</p>
+          </details>
+          <details>
+            <summary>为什么有些话题没有跟进？</summary>
+            <p>涉及未成年人、个人隐私、未经证实的信息以及可能造成二次伤害的话题，我们通常选择不跟进或延迟跟进。这是编辑原则，也是对当事人的基本尊重。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系与投稿 -->
+  <section class="ng-section ng-section--tint" id="ng-contact">
+    <div class="ng-wrap">
+      <div class="ng-contact__card">
+        <div>
+          <span class="ng-eyebrow" style="color:#f7b3c4">联系与投稿</span>
+          <h2>有线索、有作品、有想法，都可以找到我们</h2>
+          <p>无论是想投稿一条内容、提供一条话题线索，还是洽谈品牌合作，我们都在这里。工作日 24 小时内回复，复杂事项会在三个工作日内给出明确进展。</p>
+          <div class="ng-contact__btns">
+            <button class="ng-btn ng-btn--primary" type="button" data-ng-open="submit">我要投稿</button>
+            <button class="ng-btn ng-btn--ghost" type="button" data-ng-open="feedback" style="background:transparent;border-color:rgba(255,246,234,.4);color:#fff6ea">问题反馈</button>
+            <button class="ng-btn ng-btn--ghost" type="button" data-ng-copy style="background:transparent;border-color:rgba(255,246,234,.4);color:#fff6ea">复制页面链接</button>
+          </div>
+        </div>
+        <div class="ng-contact__info">
+          <div><span>商务合作</span><b>partner@nana-watch.example</b></div>
+          <div><span>投稿邮箱</span><b>submit@nana-watch.example</b></div>
+          <div><span>媒体联络</span><b>press@nana-watch.example</b></div>
+          <div><span>办公地址</span><b>城市文创园 B 座 7 层</b></div>
+          <div><span>服务时间</span><b>周一至周五 10:00–19:00</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ng-footer">
+  <div class="ng-wrap">
+    <div class="ng-footer__grid">
+      <div>
+        <div class="ng-footer__brand">
+          <div class="ng-brand__mark">nana</div>
+          <strong>nana今日吃瓜</strong>
+        </div>
+        <p class="ng-footer__about">nana今日吃瓜官方网站，专注娱乐话题观察与原创视频内容的品牌平台。坚持正版素材、清晰信源与专业剪辑，持续运营高品质内容生态，与创作者和用户共同成长。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#ng-focus">焦点内容</a></li>
+          <li><a href="#ng-flow">热门视频</a></li>
+          <li><a href="#ng-topics">专题企划</a></li>
+          <li><a href="#ng-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <ul>
+          <li><a href="#ng-creators">创作者矩阵</a></li>
+          <li><a href="#ng-news">企业动态</a></li>
+          <li><a href="#ng-faq">帮助中心</a></li>
+          <li><a href="#ng-contact">投稿与合作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌信息</h4>
+        <ul>
+          <li>运营主体：nana 内容工作室</li>
+          <li>品牌定位：娱乐话题观察社区</li>
+          <li>内容原则：真实 · 专业 · 包容</li>
+          <li>持续运营中</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ng-footer__bottom">
+      <span>© 2026 nana今日吃瓜官方网站 · 版权所有</span>
+      <span>内容备案编号：NG-2026-1119 · 官方发布</span>
+    </div>
+  </div>
+</footer>
+
+<div class="ng-modal" id="ng-modal" role="dialog" aria-modal="true" aria-labelledby="ng-modal-title">
+  <div class="ng-modal__box">
+    <div class="ng-modal__head">
+      <h3 id="ng-modal-title">提示</h3>
+      <button class="ng-modal__close" type="button" id="ng-modal-close" aria-label="关闭">×</button>
+    </div>
+    <div id="ng-modal-body"></div>
+  </div>
+</div>
+
+<div class="ng-toast" id="ng-toast" role="status" aria-live="polite"></div>
+<button class="ng-top" id="ng-top" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById("ng-toast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("ng-is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove("ng-is-show");
+    }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var header = document.getElementById("ng-header");
+  var burger = document.getElementById("ng-burger");
+  burger.addEventListener("click", function(){
+    var open = header.classList.toggle("ng-is-open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.querySelectorAll("#ng-nav a").forEach(function(a){
+    a.addEventListener("click", function(){
+      header.classList.remove("ng-is-open");
+      burger.setAttribute("aria-expanded", "false");
+      document.querySelectorAll("#ng-nav a").forEach(function(x){ x.classList.remove("ng-is-active"); });
+      a.classList.add("ng-is-active");
+    });
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById("ng-search-input");
+  var searchBtn = document.getElementById("ng-search-btn");
+  var searchFeedback = document.getElementById("ng-search-feedback");
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchFeedback.textContent = "请输入关键词，例如「复盘」「访谈」「榜单」。";
+      searchFeedback.classList.add("ng-is-show");
+      return;
+    }
+    var hits = [];
+    document.querySelectorAll(".ng-card__title, .ng-topic h3, .ng-creator__name, .ng-rank__title").forEach(function(node){
+      if(node.textContent.indexOf(kw) !== -1){ hits.push(node.textContent.trim()); }
+    });
+    if(hits.length){
+      searchFeedback.textContent = "找到 " + hits.length + " 条与「" + kw + "」相关的内容，如：" + hits[0] + "。";
+    }else{
+      searchFeedback.textContent = "暂未匹配到「" + kw + "」的相关内容，试试「访谈」「榜单」或投稿给我们。";
+    }
+    searchFeedback.classList.add("ng-is-show");
+  }
+  searchBtn.addEventListener("click", doSearch);
+  searchInput.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 点赞 */
+  document.querySelectorAll("[data-ng-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var b = btn.querySelector("b");
+      var n = b ? parseInt(b.textContent, 10) || 0 : 0;
+      var liked = btn.classList.toggle("ng-is-liked");
+      if(b){ b.textContent = liked ? (n + 1) : Math.max(0, n - 1); }
+      toast(liked ? "已点赞，感谢你的支持" : "已取消点赞");
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll("[data-ng-save]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var saved = btn.classList.toggle("ng-is-saved");
+      btn.textContent = saved ? "已收藏" : "收藏";
+      toast(saved ? "已收藏到你的内容夹" : "已取消收藏");
+    });
+  });
+
+  /* 分享 */
+  document.querySelectorAll("[data-ng-share]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      openModal("分享内容", [
+        '<p style="font-size:14px;color:#5c4f57;margin-bottom:14px">选择分享渠道，或复制链接发给朋友。分享时可注明内容来自 nana今日吃瓜官方网站。</p>',
+        '<div style="display:flex;flex-wrap:wrap;gap:10px">',
+        shareBtn("微信"), shareBtn("微博"), shareBtn("QQ"), shareBtn("复制链接"),
+        '</div>'
+      ].join(""));
+    });
+  });
+
+  function shareBtn(name){
+    return '<button class="ng-btn ng-btn--ghost" type="button" data-ng-share-target="' + name + '">' + name + '</button>';
+  }
+
+  /* 复制链接 */
+  function copyLink(){
+    var text = "nana今日吃瓜官方网站 · 娱乐话题观察社区";
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        toast("链接已复制，可粘贴分享");
+      }).catch(function(){
+        fallbackCopy(text);
+      });
+    }else{
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); toast("链接已复制，可粘贴分享"); }
+    catch(e){ toast("复制失败，请手动选择内容"); }
+    document.body.removeChild(ta);
+  }
+  document.querySelectorAll("[data-ng-copy]").forEach(function(btn){
+    btn.addEventListener("click", copyLink);
+  });
+
+  /* 弹窗 */
+  var modal = document.getElementById("ng-modal");
+  var modalTitle = document.getElementById("ng-modal-title");
+  var modalBody = document.getElementById("ng-modal-body");
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add("ng-is-show");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    modal.classList.remove("ng-is-show");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("ng-modal-close").addEventListener("click", closeModal);
+  modal.addEventListener("click", function(e){
+    if(e.target === modal){ closeModal(); }
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && modal.classList.contains("ng-is-show")){ closeModal(); }
+  });
+
+  /* 弹窗内按钮代理 */
+  modalBody.addEventListener("click", function(e){
+    var target = e.target.closest("[data-ng-share-target]");
+    if(target){
+      toast("已生成「" + target.getAttribute("data-ng-share-target") + "」分享卡片");
+      closeModal();
+      return;
+    }
+    if(e.target.closest("[data-ng-submit-form]")){
+      var nameInput = document.getElementById("ng-submit-name");
+      var titleInput = document.getElementById("ng-submit-title");
+      if(!titleInput || !titleInput.value.trim()){
+        toast("请填写内容标题后再提交");
+        return;
+      }
+      toast("投稿已提交，我们会在七个工作日内回复");
+      closeModal();
+      return;
+    }
+    if(e.target.closest("[data-ng-feedback-form]")){
+      var fb = document.getElementById("ng-feedback-text");
+      if(!fb || !fb.value.trim()){
+        toast("请简单描述你遇到的问题");
+        return;
+      }
+      toast("反馈已收到，感谢你的帮助");
+      closeModal();
+    }
+  });
+
+  /* 打开投稿 / 反馈 */
+  document.querySelectorAll("[data-ng-open]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var kind = btn.getAttribute("data-ng-open");
+      if(kind === "submit"){
+        openModal("投稿入口", [
+          '<form class="ng-form" onsubmit="return false">',
+          '<div><label for="ng-submit-name">你的称呼</label><input id="ng-submit-name" type="text" placeholder="例如：小满同学" maxlength="20"></div>',
+          '<div><label for="ng-submit-title">内容标题</label><input id="ng-submit-title" type="text" placeholder="请填写具体、可辨识的标题" maxlength="40"></div>',
+          '<div><label for="ng-submit-type">内容类型</label><select id="ng-submit-type"><option>话题复盘</option><option>人物访谈</option><option>现场记录</option><option>创作幕后</option><option>榜单测评</option></select></div>',
+          '<div><label for="ng-submit-desc">内容简介</label><textarea id="ng-submit-desc" placeholder="简要说明内容来源、涉及素材授权情况与核心观点"></textarea></div>',
+          '<p style="font-size:12.5px;color:#5c4f57">投稿即表示你确认内容为原创或已获授权。审核结果将通过站内消息通知。</p>',
+          '<button class="ng-btn ng-btn--primary" type="button" data-ng-submit-form style="justify-content:center">提交投稿</button>',
+          '</form>'
+        ].join(""));
+      }else{
+        openModal("问题反馈", [
+          '<form class="ng-form" onsubmit="return false">',
+          '<div><label for="ng-feedback-type">反馈类型</label><select id="ng-feedback-type"><option>内容信息有误</option><option>页面使用问题</option><option>版权与授权</option><option>社区管理建议</option></select></div>',
+          '<div><label for="ng-feedback-text">问题描述</label><textarea id="ng-feedback-text" placeholder="请描述具体位置与问题，便于我们核实"></textarea></div>',
+          '<button class="ng-btn ng-btn--primary" type="button" data-ng-feedback-form style="justify-content:center">提交反馈</button>',
+          '</form>'
+        ].join(""));
+      }
+    });
+  });
+
+  /* 作者档案弹窗 */
+  var authorData = {
+    "南枝观察室": {field:"深度复盘 · 时间线梳理", works:"186 件作品", fans:"24.6 万关注", text:"前媒体编辑，擅长把碎片信息重排成具备因果关系的叙事。她的内容常附完整信源清单与更新时间，主张「先对齐事实，再讨论观点」。"},
+    "柚子访谈录": {field:"人物访谈 · 行业观察", works:"92 件作品", fans:"15.2 万关注", text:"七年人物访谈经验，偏爱沉默和停顿。相信一场好对话不靠追问，而靠留白与倾听，作品多次进入官方精品内容池。"},
+    "图谱工作室": {field:"数据可视化 · 关系梳理", works:"64 件作品", fans:"11.8 万关注", text:"由两名设计师与一名数据分析师组成，用图表还原复杂关系。每张图都附来源说明与不确定度标注，风格克制清晰。"},
+    "麦穗编辑部": {field:"榜单测评 · 品质口碑", works:"128 件作品", fans:"19.4 万关注", text:"专注横向对比与榜单运营，坚持同一套评价维度，并公开评分标准，接受读者对规则提出质询与修订建议。"},
+    "林间速报": {field:"速览快讯 · 信源核对", works:"240 件作品", fans:"32.1 万关注", text:"三分钟内讲清一件事是硬功夫。每条内容标注信息状态，宁可少说，也不含糊，是站内更新最稳定的创作者之一。"},
+    "晚安记录仪": {field:"现场记录 · 情绪观察", works:"76 件作品", fans:"9.7 万关注", text:"喜欢拍散场、拍门口、拍人群退去后的样子。她认为热度会降温，但人的表情不会说谎，作品以温柔的长镜头著称。"}
+  };
+  document.querySelectorAll("[data-ng-author]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var name = btn.getAttribute("data-ng-author");
+      var d = authorData[name] || {};
+      openModal(name + " · 作者档案", [
+        '<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">',
+        '<div class="ng-avatar ng-av-1" style="width:56px;height:56px;border-radius:16px;font-size:20px">' + name.charAt(0) + '</div>',
+        '<div><div style="font-weight:800;font-size:16px">' + name + '</div>',
+        '<div style="font-size:13px;color:#5c4f57">' + (d.field || "") + '</div></div></div>',
+        '<p style="font-size:14.2px;color:#5c4f57;margin-bottom:16px">' + (d.text || "") + '</p>',
+        '<div style="display:flex;gap:26px;font-size:13px;color:#5c4f57;margin-bottom:18px">',
+        '<div><b style="display:block;font-size:16px;color:#b0204f">' + (d.works || "") + '</b>作品</div>',
+        '<div><b style="display:block;font-size:16px;color:#b0204f">' + (d.fans || "") + '</b>关注</div>',
+        '</div>',
+        '<button class="ng-btn ng-btn--primary" type="button" data-ng-share-target="作者主页" style="justify-content:center;width:100%">关注这位创作者</button>'
+      ].join(""));
+    });
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll("[data-ng-count]");
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute("data-ng-count"), 10) || 0;
+      var start = null;
+      var dur = 1200;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val.toLocaleString("zh-CN");
+        if(p < 1){ requestAnimationFrame(step); }
+        else{ el.textContent = target.toLocaleString("zh-CN"); }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCounters(); io.disconnect(); }
+      });
+    }, {threshold:.3});
+    counters.forEach(function(el){ io.observe(el); });
+  }else{
+    runCounters();
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById("ng-top");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 620){ topBtn.classList.add("ng-is-show"); }
+    else{ topBtn.classList.remove("ng-is-show"); }
+  }, {passive:true});
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  /* 导航高亮 */
+  var sections = document.querySelectorAll("main section[id]");
+  var navLinks = document.querySelectorAll("#ng-nav a");
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var current = sections[0] ? sections[0].id : "";
+    sections.forEach(function(s){
+      if(s.offsetTop <= pos){ current = s.id; }
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle("ng-is-active", a.getAttribute("href") === "#" + current);
+    });
+  }
+  window.addEventListener("scroll", highlight, {passive:true});
+  highlight();
+})();
+</script>
+</body>
+            </html>
